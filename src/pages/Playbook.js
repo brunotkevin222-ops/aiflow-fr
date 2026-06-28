@@ -8,30 +8,30 @@ const CHAPTERS = [
     title: 'Introduction',
     content: [
       { type: 'heading', text: 'Bienvenue dans le Playbook AIFlow' },
-      { type: 'text', text: 'Ce playbook est votre guide complet pour comprendre, déployer et maximiser la valeur des agents IA dans votre entreprise. Conçu pour les PME françaises, il couvre tout : de la stratégie à l'implémentation technique.' },
+      { type: 'text', text: "Ce playbook est votre guide complet pour comprendre, déployer et maximiser la valeur des agents IA dans votre entreprise. Conçu pour les PME françaises, il couvre tout : de la stratégie à l'implémentation technique." },
       { type: 'callout', text: 'Ce guide est mis à jour régulièrement. Dernière mise à jour : Juin 2026.' },
     ],
   },
   {
     slug: 'pourquoi-ia',
-    title: 'Pourquoi l'IA en 2026',
+    title: "Pourquoi l'IA en 2026",
     content: [
-      { type: 'heading', text: 'L'IA n'est plus une option' },
-      { type: 'text', text: 'En 2026, les entreprises qui n'ont pas intégré l'IA dans leurs processus clés perdent en moyenne 40% de compétitivité par rapport à leurs concurrents. Le coût d'entrée a chuté de 90% en 3 ans.' },
+      { type: 'heading', text: "L'IA n'est plus une option" },
+      { type: 'text', text: "En 2026, les entreprises qui n'ont pas intégré l'IA dans leurs processus clés perdent en moyenne 40% de compétitivité. Le coût d'entrée a chuté de 90% en 3 ans." },
       { type: 'list', items: [
-        'GPT-4 et ses successeurs ont atteint des performances surhumaines sur 80% des tâches de bureau',
-        'Le coût d'un agent IA équivaut à 2% d'un salaire junior',
+        'GPT-4 et ses successeurs : performances surhumaines sur 80% des tâches',
+        "Le coût d'un agent IA équivaut à 2% d'un salaire junior",
         'ROI moyen constaté : 340% sur 12 mois',
-        'Délai de mise en place : réduit à 8 jours en moyenne',
+        'Délai de mise en place : 8 jours en moyenne',
       ]},
     ],
   },
   {
     slug: 'cas-usage',
-    title: 'Cas d'usage',
+    title: "Cas d'usage",
     content: [
       { type: 'heading', text: 'Les 5 automatisations à fort ROI' },
-      { type: 'text', text: 'Voici les cas d'usage qui génèrent le meilleur retour sur investissement pour les PME françaises, classés par impact.' },
+      { type: 'text', text: "Voici les cas d'usage qui génèrent le meilleur retour pour les PME françaises, classés par impact." },
       { type: 'list', items: [
         '1. Prospection email automatisée (+220% de taux de réponse)',
         '2. Support client H24 (-73h de travail/semaine)',
@@ -46,10 +46,10 @@ const CHAPTERS = [
     title: 'Implémentation',
     content: [
       { type: 'heading', text: 'Notre méthode en 8 jours' },
-      { type: 'text', text: 'Notre processus d'implémentation est rodé après 200+ déploiements. Il est conçu pour minimiser les risques et maximiser l'adoption par vos équipes.' },
-      { type: 'callout', text: 'Étape clé : impliquer un 'champion IA' interne dès J+1 double le taux d'adoption.' },
+      { type: 'text', text: "Notre processus est rodé après 200+ déploiements. Il est conçu pour minimiser les risques et maximiser l'adoption." },
+      { type: 'callout', text: "Étape clé : impliquer un champion IA interne dès J+1 double le taux d'adoption." },
       { type: 'list', items: [
-        'J1-J2 : Audit des processus et identification des opportunités',
+        "J1-J2 : Audit des processus et identification des opportunités",
         'J3-J5 : Configuration et tests des agents',
         'J6-J7 : Intégration avec vos outils existants',
         'J8 : Formation équipe et mise en production',
@@ -61,7 +61,7 @@ const CHAPTERS = [
     title: 'Stack technique',
     content: [
       { type: 'heading', text: 'Les outils que nous utilisons' },
-      { type: 'text', text: 'Notre stack est optimisé pour la fiabilité, la scalabilité et la maintenabilité. Voici les briques essentielles.' },
+      { type: 'text', text: 'Notre stack est optimisé pour la fiabilité, la scalabilité et la maintenabilité.' },
       { type: 'list', items: [
         'Orchestration : n8n ou Make (selon complexité)',
         'LLM : GPT-4o, Claude 3.5, ou modèles open-source',
@@ -76,11 +76,11 @@ const CHAPTERS = [
     title: 'Mesurer le ROI',
     content: [
       { type: 'heading', text: 'KPIs à suivre' },
-      { type: 'text', text: 'Sans métriques claires, impossible d'optimiser. Voici les indicateurs à tracker dès le premier jour.' },
+      { type: 'text', text: 'Sans métriques claires, impossible de progresser. Voici les indicateurs à tracker dès le premier jour.' },
       { type: 'list', items: [
         'Taux de réponse email (objectif : +150%)',
         'Temps de réponse support (objectif : < 30 sec)',
-        'Taux de conversion lead → RDV (objectif : +80%)',
+        'Taux de conversion lead > RDV (objectif : +80%)',
         'Heures économisées par semaine (objectif : > 20h)',
         'Coût par lead qualifié (objectif : -60%)',
       ]},
@@ -120,7 +120,7 @@ function Playbook() {
             <span className="nav__logo-text">AIFlow.fr</span>
           </Link>
         </div>
-        <Link to="/" className="btn btn--outline">← Retour au site</Link>
+        <Link to="/" className="btn btn--outline">Retour au site</Link>
       </nav>
 
       <div className="playbook__layout">
@@ -130,8 +130,8 @@ function Playbook() {
             {CHAPTERS.map((ch) => (
               <Link
                 key={ch.slug}
-                to={`/playbook/${ch.slug}`}
-                className={`playbook__nav-link${currentSlug === ch.slug ? ' playbook__nav-link--active' : ''}`}
+                to={"/playbook/" + ch.slug}
+                className={"playbook__nav-link" + (currentSlug === ch.slug ? ' playbook__nav-link--active' : '')}
               >
                 {ch.title}
               </Link>
@@ -139,7 +139,7 @@ function Playbook() {
           </nav>
           <div className="playbook__cta">
             <p>Prêt à déployer ?</p>
-            <Link to="/#contact" className="btn btn--primary btn--full">Réserver un Audit →</Link>
+            <Link to="/#contact" className="btn btn--primary btn--full">Réserver un Audit</Link>
           </div>
         </aside>
 
@@ -153,18 +153,18 @@ function Playbook() {
           <div className="playbook__nav-bottom">
             {CHAPTERS.indexOf(currentChapter) > 0 && (
               <Link
-                to={`/playbook/${CHAPTERS[CHAPTERS.indexOf(currentChapter) - 1].slug}`}
+                to={"/playbook/" + CHAPTERS[CHAPTERS.indexOf(currentChapter) - 1].slug}
                 className="btn btn--outline"
               >
-                ← {CHAPTERS[CHAPTERS.indexOf(currentChapter) - 1].title}
+                Precedent : {CHAPTERS[CHAPTERS.indexOf(currentChapter) - 1].title}
               </Link>
             )}
             {CHAPTERS.indexOf(currentChapter) < CHAPTERS.length - 1 && (
               <Link
-                to={`/playbook/${CHAPTERS[CHAPTERS.indexOf(currentChapter) + 1].slug}`}
+                to={"/playbook/" + CHAPTERS[CHAPTERS.indexOf(currentChapter) + 1].slug}
                 className="btn btn--primary"
               >
-                {CHAPTERS[CHAPTERS.indexOf(currentChapter) + 1].title} →
+                Suivant : {CHAPTERS[CHAPTERS.indexOf(currentChapter) + 1].title}
               </Link>
             )}
           </div>
