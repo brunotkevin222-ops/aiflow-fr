@@ -1,0 +1,23 @@
+.playbook { min-height: 100vh; background: var(--bg-dark); }
+.playbook__layout { display: grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 65px); }
+.playbook__sidebar { padding: 2rem 1.5rem; border-right: 1px solid var(--border); position: sticky; top: 65px; height: calc(100vh - 65px); overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; background: rgba(10, 18, 40, 0.5); }
+.playbook__sidebar-title { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-secondary); padding: 0 0.5rem; margin-bottom: 0.5rem; }
+.playbook__nav { display: flex; flex-direction: column; gap: 0.2rem; flex: 1; }
+.playbook__nav-link { display: block; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.88rem; color: var(--text-secondary); transition: all 0.2s; font-weight: 500; }
+.playbook__nav-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.playbook__nav-link--active { color: var(--text-primary); background: rgba(0, 47, 167, 0.15); border-left: 2px solid var(--primary); }
+.playbook__cta { padding: 1rem; background: rgba(0,47,167,0.1); border: 1px solid rgba(0,47,167,0.2); border-radius: 12px; text-align: center; }
+.playbook__cta p { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.8rem; }
+.playbook__content { padding: 3rem 4rem; max-width: 780px; }
+.playbook__breadcrumb { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem; }
+.playbook__breadcrumb a { color: var(--text-secondary); }
+.playbook__breadcrumb a:hover { color: var(--text-primary); }
+.playbook__chapter-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; letter-spacing: -0.01em; }
+.playbook__nav-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); gap: 1rem; }
+.chapter { display: flex; flex-direction: column; gap: 1.5rem; }
+.chapter__heading { font-size: 1.4rem; font-weight: 700; margin-top: 1rem; }
+.chapter__text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; }
+.chapter__callout { background: rgba(0,47,167,0.08); border: 1px solid rgba(0,47,167,0.2); border-left: 3px solid var(--primary); border-radius: 8px; padding: 1rem 1.2rem; font-size: 0.88rem; color: var(--text-secondary); font-style: italic; }
+.chapter__list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.chapter__list-item { font-size: 0.9rem; color: var(--text-secondary); padding: 0.5rem 0.8rem; background: rgba(255,255,255,0.02); border-radius: 6px; border-left: 2px solid rgba(65,105,225,0.4); }
+@media (max-width: 768px) { .playbook__layout { grid-template-columns: 1fr; } .playbook__sidebar { position: static; height: auto; } .playbook__content { padding: 2rem 1.5rem; } }
