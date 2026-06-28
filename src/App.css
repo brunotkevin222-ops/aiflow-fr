@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #002FA7;
+    --primary-light: #1a4fd4;
+    --accent: #4169E1;
+    --bg-dark: #050a1a;
+    --bg-card: #0a1228;
+    --text-primary: #ffffff;
+    --text-secondary: #8892a4;
+    --border: rgba(255, 255, 255, 0.08);
+    --gradient: linear-gradient(135deg, #002FA7, #4169E1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.App {
+    min-height: 100vh;
+}
